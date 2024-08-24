@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "formidable": "^3.5.1",
+    "nodemailer": "^6.9.14",
+    "vercel": "^37.1.1"
+  }
+}
