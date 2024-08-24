@@ -1146,10 +1146,10 @@
           _this.html(
             event.strftime(
               "" +
-              '<div class="counter-container"><div class="countdown-box first"><div class="number">%-D</div><span>Days</span></div>' +
-              '<div class="countdown-box"><div class="number">%H</div><span>Hours</span></div>' +
-              '<div class="countdown-box"><div class="number">%M</div><span>Minutes</span></div>' +
-              '<div class="countdown-box last"><div class="number">%S</div><span>Seconds</span></div></div>'
+                '<div class="counter-container"><div class="countdown-box first"><div class="number">%-D</div><span>Days</span></div>' +
+                '<div class="countdown-box"><div class="number">%H</div><span>Hours</span></div>' +
+                '<div class="countdown-box"><div class="number">%M</div><span>Minutes</span></div>' +
+                '<div class="countdown-box last"><div class="number">%S</div><span>Seconds</span></div></div>'
             )
           );
         })
@@ -1157,10 +1157,10 @@
           _this.html(
             event.strftime(
               "" +
-              '<div class="counter-container"><div class="countdown-box first" data-number="00"><div class="number">00</div><span>Days</span></div>' +
-              '<div class="countdown-box"><div class="number">00</div><span>Hours</span></div>' +
-              '<div class="countdown-box"><div class="number">00</div><span>Minutes</span></div>' +
-              '<div class="countdown-box last"><div class="number">00</div><span>Seconds</span></div></div>'
+                '<div class="counter-container"><div class="countdown-box first" data-number="00"><div class="number">00</div><span>Days</span></div>' +
+                '<div class="countdown-box"><div class="number">00</div><span>Hours</span></div>' +
+                '<div class="countdown-box"><div class="number">00</div><span>Minutes</span></div>' +
+                '<div class="countdown-box last"><div class="number">00</div><span>Seconds</span></div></div>'
             )
           );
         });
@@ -1352,10 +1352,10 @@
   };
   const curvedTextAnimation = (target, options) => {
     let duration = options.duration
-      ? options.duration <= 2000
-        ? 2000
-        : options.duration
-      : 2000,
+        ? options.duration <= 2000
+          ? 2000
+          : options.duration
+        : 2000,
       content = options.string,
       curveText = anime.timeline();
     const lineEq = (y2, y1, x2, x1, currentVal) => {
@@ -1806,7 +1806,7 @@
   var instagramWrapperItems = document.querySelectorAll(".instafeed-wrapper");
   instagramWrapperItems.forEach(function (instagramWrapperItem) {
     var token =
-      "IGQWROOXpoaTRsZADBZATUpqNk1PUXR4ajhWdEhEN1paU1VqeW82UVhqMWdIazhDMmJxTnpYOWZAISEd6NjJ5b2tmUmF1ZAzdFZA09oVVdHSnhJZAzNsSWUtcXkxUDV4dUJ5bEtXbFpNcWVyRjFJaHZAGN0tCb3B3aWVCcFkZD",
+        "IGQWROOXpoaTRsZADBZATUpqNk1PUXR4ajhWdEhEN1paU1VqeW82UVhqMWdIazhDMmJxTnpYOWZAISEd6NjJ5b2tmUmF1ZAzdFZA09oVVdHSnhJZAzNsSWUtcXkxUDV4dUJ5bEtXbFpNcWVyRjFJaHZAGN0tCb3B3aWVCcFkZD",
       _this = $(instagramWrapperItem),
       token = _this.attr("data-token") || token,
       total = _this.attr("data-total") || "6",
@@ -2045,7 +2045,7 @@
         grecaptcha.ready(function () {
           grecaptcha
             .execute(grecaptchav3, { action: "submit" })
-            .then(function (token) { });
+            .then(function (token) {});
         });
       }
     }
@@ -2413,7 +2413,7 @@
           if (mdThumbDirection != "" && mdThumbDirection != undefined) {
             var thumbDirection =
               sliderOptions["thumbs"]["swiper"]["direction"] != "" &&
-                sliderOptions["thumbs"]["swiper"]["direction"] != undefined
+              sliderOptions["thumbs"]["swiper"]["direction"] != undefined
                 ? sliderOptions["thumbs"]["swiper"]["direction"]
                 : mdThumbDirection;
             sliderOptions["thumbs"]["swiper"]["on"] = {
@@ -2772,8 +2772,8 @@
                 closestSectionObj = _this.closest("footer");
               }
               var sectionPaddingTop = parseInt(
-                closestSectionObj.css("padding-top")
-              ),
+                  closestSectionObj.css("padding-top")
+                ),
                 areaHeight = _this.find("*").outerHeight(),
                 overlayTop = areaHeight + sectionPaddingTop;
               if (_this.hasClass("overlap-section-one-fourth")) {
@@ -2868,8 +2868,8 @@
     function updatePosition() {
       active ||
         ((pos.x += (mouse.x - pos.x) * ratio),
-          (pos.y += (mouse.y - pos.y) * ratio),
-          TweenLite.to(ball, 0.4, { x: pos.x, y: pos.y }));
+        (pos.y += (mouse.y - pos.y) * ratio),
+        TweenLite.to(ball, 0.4, { x: pos.x, y: pos.y }));
     }
     if (typeof TweenLite !== "undefined") {
       TweenLite.set(ball, {
@@ -3225,7 +3225,7 @@
       if (e && e.type == "resize") {
         viewportHeight = docElm.clientHeight;
       }
-      for (i = opts.elements.length; i--;) {
+      for (i = opts.elements.length; i--; ) {
         var elm = opts.elements[i],
           pos = elm.getBoundingClientRect(),
           topPerc = (pos.top / viewportHeight) * 100,
@@ -3382,7 +3382,7 @@
   });
   // var themeDemoHTML =
   //   '<div class="theme-demos"><div class="demo-button-wrapper"><div class="buy-theme"><a href="https://1.envato.market/R53mL2" target="_blank"><div class="theme-wrapper"><div><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 22.284 25.436"><path d="M19.314,9.285c-.745-.414-2.882-.158-5.449.637-4.492,3.07-8.283,7.594-8.547,14.858-.048.174-.491-.024-.579-.077a10.346,10.346,0,0,1-.681-8.3c.189-.314-.428-.7-.539-.591a12.683,12.683,0,0,0-1.765,2.278,11.061,11.061,0,0,0,19.33,10.759c3.438-6.161.246-18.432-1.77-19.558Z" transform="translate(-0.32 -9.089)" fill="#fff"></path></svg></div></div></a></div><div class="all-demo"><a href="#"><div class="theme-wrapper"><div>52+ Pre-built sites</div></div></a></div></div><span class="close-popup fs-22 text-dark-gray w-40px h-40px d-flex justify-content-center align-items-center"><i class="fa-solid fa-xmark"></i></span></div>';
-  
+
   $("body:not( .landing-page )").append(themeDemoHTML);
   $(document).on("click", ".all-demo", function () {
     var themeDemosObj = $(this).parents(".theme-demos");
@@ -3416,7 +3416,6 @@
       }, 800);
     }
   });
-
 })(jQuery);
 function initMap() {
   $(".map").each(function (e) {
@@ -3563,3 +3562,19 @@ function initMap() {
     }
   });
 }
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".portfolio-image").forEach((item) => {
+    const video = item.querySelector(".portfolio-video");
+
+    item.addEventListener("mouseenter", () => {
+      video.style.opacity = "1"; // Show the video
+      video.play(); // Play the video
+    });
+
+    item.addEventListener("mouseleave", () => {
+      video.style.opacity = "0"; // Hide the video
+      video.pause(); // Pause the video
+      video.currentTime = 0; // Reset video to start
+    });
+  });
+});
