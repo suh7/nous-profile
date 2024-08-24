@@ -981,10 +981,32 @@
                   data-bottom-top="transform: translateY(-40px)"
                   data-top-bottom="transform: translateY(40px)"
                 >
-                  <div class="portfolio-image bg-medium-gray border-radius-6px">
-                    <a href="demo-web-agency-single-project-creative.html"
-                      ><img src="images/portfolio-177.jpg" alt=""
-                    /></a>
+                  <div
+                    class="portfolio-image bg-medium-gray border-radius-6px position-relative"
+                  >
+                    <!-- Image -->
+                    <a href="demo-web-agency-single-project-creative.html">
+                      <img
+                        src="./images/portfolio assets/project-8.png"
+                        alt=""
+                        style="transition: opacity 0.3s ease"
+                      />
+                    </a>
+                    <!-- Video -->
+                    <video
+                      class="portfolio-video position-absolute top-0 start-0 w-100 h-100"
+                      muted
+                      loop
+                      preload="metadata"
+                      autoplay
+                      style="opacity: 0; transition: opacity 0.3s ease"
+                    >
+                      <source
+                        src="./images/portfolio assets/project-8.mp4"
+                        type="video/mp4"
+                      />
+                      Your browser does not support the video tag.
+                    </video>
                   </div>
                   <div
                     class="portfolio-caption pt-35px pb-35px md-pt-25px md-pb-25px"
