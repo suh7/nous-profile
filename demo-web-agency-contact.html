@@ -21,6 +21,7 @@
         <link rel="stylesheet" href="css/style.min.css"/>
         <link rel="stylesheet" href="css/responsive.min.css"/>
         <link rel="stylesheet" href="demos/web-agency/web-agency.css" /> 
+        <link rel="stylesheet" href="css/style.css"/>
     </head>
     <body data-mobile-nav-style="classic" class="background-position-center-top" style="background-image: url(images/vertical-line-bg-small-medium-gray.svg)"> 
         <!-- start header -->
@@ -212,32 +213,350 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-5 col-lg-6">
-                        <h2 class="text-dark-gray fw-600 mb-10 ls-minus-2px">Let us help you get your project started.</h2>
+                        <!-- <h2 class="text-dark-gray fw-600 mb-10 ls-minus-2px">Let us help you get your project started.</h2> -->
                         <div class="outside-box-left-35 d-none d-lg-inline-block">
-                            <div class="fs-350 xl-fs-300 lg-fs-250 text-base-color fw-600 ls-minus-20px word-break-normal" data-bottom-top="transform:scale(1, 1) translate3d(0px, 0px, 0px);" data-top-bottom="transform:scale(1, 1) translate3d(-100px, 0px, 0px);">contact</div>
+                            <div class="fs-350 xl-fs-300 lg-fs-250 text-base-color fw-600 ls-minus-20px word-break-normal" data-bottom-top="transform:scale(1, 1) translate3d(0px, 0px, 0px);" data-top-bottom="transform:scale(1, 1) translate3d(-100px, 0px, 0px);"  style="font-size: 350px!important;">....contact</div>
                         </div>
                     </div>
-                    <div class="col-lg-5 offset-lg-1 contact-form-style-03" data-anime='{ "el": "childs", "translateY": [-15, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <h6 class="fw-500 text-dark-gray mb-20px sm-mb-10px ls-minus-05px"><span class="fw-700">Hello,</span> Tell us about your project.</h6>
-                        <form action="https://craftohtml.themezaa.com/email-templates/contact-form.php" method="post">
-                            <div class="position-relative form-group mb-20px">
-                                <span class="form-icon"><i class="bi bi-person icon-extra-medium text-dark-gray"></i></span>
-                                <input class="ps-0 border-radius-0px border-color-dark-gray form-control required" type="text" name="name" placeholder="Your name*" />
+                    <section class="cb-contact">
+                        <div class="cb-contact-content">
+                          <div class="cb-contact-container -lg">
+                            <div class="cb-contact-header">
+                              <h1>
+                                <em>Hey!</em> Tell us all<br />
+                                <span style="white-space: nowrap"
+                                  >the things <img src="../assets/emoji/lg/1F44B.png" alt="👋"
+                                /></span>
+                              </h1>
                             </div>
-                            <div class="position-relative form-group mb-20px">
-                                <span class="form-icon"><i class="bi bi-envelope icon-extra-medium text-dark-gray"></i></span>
-                                <input class="ps-0 border-radius-0px border-bottom border-color-dark-gray form-control required" type="email" name="email" placeholder="Your email address*" />
+                            <form
+                            class="cb-contact-form"
+                            action="/api/send-email"
+                            method="post"
+                            enctype="multipart/form-data"
+                          >
+                            <div class="cb-contact-group">
+                              <div class="cb-contact-label">I'm interested in...</div>
+                              <div class="cb-contact-cgrid">
+                                <div class="cb-contact-cgrid-col">
+                                  <label class="cb-checkbox cb-checkbox_cta">
+                                    <input
+                                      type="checkbox"
+                                      name="service[]"
+                                      value="site-scratch"
+                                    />
+                                    <span class="cb-checkbox_cta-box">
+                                      <span class="cb-checkbox_cta-border"></span>
+                                      <span class="cb-checkbox_cta-ripple">
+                                        <span></span>
+                                      </span>
+                                      <span class="cb-checkbox_cta-title">
+                                        <span data-text="Site from scratch">Site from scratch</span>
+                                      </span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="cb-contact-cgrid-col">
+                                  <label class="cb-checkbox cb-checkbox_cta">
+                                    <input type="checkbox" name="service[]" value="design" />
+                                    <span class="cb-checkbox_cta-box">
+                                      <span class="cb-checkbox_cta-border"></span>
+                                      <span class="cb-checkbox_cta-ripple">
+                                        <span></span>
+                                      </span>
+                                      <span class="cb-checkbox_cta-title">
+                                        <span data-text="UX/UI design">UX/UI design</span>
+                                      </span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="cb-contact-cgrid-col">
+                                  <label class="cb-checkbox cb-checkbox_cta">
+                                    <input
+                                      type="checkbox"
+                                      name="service[]"
+                                      value="product-design"
+                                    />
+                                    <span class="cb-checkbox_cta-box">
+                                      <span class="cb-checkbox_cta-border"></span>
+                                      <span class="cb-checkbox_cta-ripple">
+                                        <span></span>
+                                      </span>
+                                      <span class="cb-checkbox_cta-title">
+                                        <span data-text="Product design">Product design</span>
+                                      </span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="cb-contact-cgrid-col">
+                                  <label class="cb-checkbox cb-checkbox_cta">
+                                    <input
+                                      type="checkbox"
+                                      name="service[]"
+                                      value="no-code-site"
+                                    />
+                                    <span class="cb-checkbox_cta-box">
+                                      <span class="cb-checkbox_cta-border"></span>
+                                      <span class="cb-checkbox_cta-ripple">
+                                        <span></span>
+                                      </span>
+                                      <span class="cb-checkbox_cta-title">
+                                        <span data-text="No-code site">No-code site</span>
+                                      </span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="cb-contact-cgrid-col">
+                                  <label class="cb-checkbox cb-checkbox_cta">
+                                    <input type="checkbox" name="service[]" value="motion" />
+                                    <span class="cb-checkbox_cta-box">
+                                      <span class="cb-checkbox_cta-border"></span>
+                                      <span class="cb-checkbox_cta-ripple">
+                                        <span></span>
+                                      </span>
+                                      <span class="cb-checkbox_cta-title">
+                                        <span data-text="Motion design">Motion design</span>
+                                      </span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="cb-contact-cgrid-col">
+                                  <label class="cb-checkbox cb-checkbox_cta">
+                                    <input type="checkbox" name="service[]" value="branding" />
+                                    <span class="cb-checkbox_cta-box">
+                                      <span class="cb-checkbox_cta-border"></span>
+                                      <span class="cb-checkbox_cta-ripple">
+                                        <span></span>
+                                      </span>
+                                      <span class="cb-checkbox_cta-title">
+                                        <span data-text="Branding">Branding</span>
+                                      </span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="cb-contact-cgrid-col">
+                                  <label class="cb-checkbox cb-checkbox_cta">
+                                    <input
+                                      type="checkbox"
+                                      name="service[]"
+                                      value="mobile-development"
+                                    />
+                                    <span class="cb-checkbox_cta-box">
+                                      <span class="cb-checkbox_cta-border"></span>
+                                      <span class="cb-checkbox_cta-ripple">
+                                        <span></span>
+                                      </span>
+                                      <span class="cb-checkbox_cta-title">
+                                        <span data-text="Mobile development">Mobile development</span>
+                                      </span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
                             </div>
-                            <div class="position-relative form-group form-textarea mb-0"> 
-                                <textarea class="ps-0 border-radius-0px border-bottom border-color-dark-gray form-control" name="comment" placeholder="Your message" rows="4"></textarea>
-                                <span class="form-icon"><i class="bi bi-chat-square-dots icon-extra-medium text-dark-gray"></i></span>
-                                <input type="hidden" name="redirect" value="">
-                                <button class="btn submit btn-small btn-dark-gray btn-box-shadow btn-round-edge mt-35px mb-25px w-100" type="submit">Send message</button>
-                                <p class="fs-14 lh-24 w-100 mb-0 text-center text-lg-start">We are committed to protecting your privacy. We will never collect information about you without your explicit consent.</p>
-                                <div class="form-results mt-20px d-none"></div>
+                            <div class="cb-contact-group">
+                              <div
+                                class="cb-input cb-input_light"
+                                data-validity-msg='{"valueMissing":"Please enter your name"}'
+                              >
+                                <div class="cb-input_light-box">
+                                  <input
+                                    type="text"
+                                    name="name"
+                                    placeholder="Your name"
+                                    aria-label="Your name"
+                                    required
+                                  />
+                                  <div class="cb-input_light-line"></div>
+                                </div>
+                                <div class="cb-input_light-message"></div>
+                              </div>
                             </div>
-                        </form>
-                    </div>
+                            <div class="cb-contact-group">
+                              <div
+                                class="cb-input cb-input_light"
+                                data-validity-msg='{"valueMissing":"Please enter your email address","typeMismatch":"That email address looks a bit weird"}'
+                              >
+                                <div class="cb-input_light-box">
+                                  <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="Email"
+                                    aria-label="Email"
+                                    required
+                                  />
+                                  <div class="cb-input_light-line"></div>
+                                </div>
+                                <div class="cb-input_light-message"></div>
+                              </div>
+                            </div>
+                            <div class="cb-contact-group">
+                              <div class="cb-input cb-input_light">
+                                <div class="cb-input_light-box">
+                                  <textarea
+                                    rows="4"
+                                    name="mess"
+                                    placeholder="Tell us about your project"
+                                    aria-label="Tell us about your project"
+                                  ></textarea>
+                                  <div class="cb-input_light-line"></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="cb-contact-group -it">
+                              <div class="cb-contact-label">Project budget (USD)</div>
+                              <div class="cb-contact-cgrid">
+                                <div class="cb-contact-cgrid-col">
+                                  <label class="cb-checkbox cb-checkbox_cta">
+                                    <input type="radio" name="budget" value="10-20k" />
+                                    <span class="cb-checkbox_cta-box">
+                                      <span class="cb-checkbox_cta-border"></span>
+                                      <span class="cb-checkbox_cta-ripple">
+                                        <span></span>
+                                      </span>
+                                      <span class="cb-checkbox_cta-title">
+                                        <span data-text="10-20k">10-20k</span>
+                                      </span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="cb-contact-cgrid-col">
+                                  <label class="cb-checkbox cb-checkbox_cta">
+                                    <input type="radio" name="budget" value="30-40k" />
+                                    <span class="cb-checkbox_cta-box">
+                                      <span class="cb-checkbox_cta-border"></span>
+                                      <span class="cb-checkbox_cta-ripple">
+                                        <span></span>
+                                      </span>
+                                      <span class="cb-checkbox_cta-title">
+                                        <span data-text="30-40k">30-40k</span>
+                                      </span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="cb-contact-cgrid-col">
+                                  <label class="cb-checkbox cb-checkbox_cta">
+                                    <input type="radio" name="budget" value="40-50k" />
+                                    <span class="cb-checkbox_cta-box">
+                                      <span class="cb-checkbox_cta-border"></span>
+                                      <span class="cb-checkbox_cta-ripple">
+                                        <span></span>
+                                      </span>
+                                      <span class="cb-checkbox_cta-title">
+                                        <span data-text="40-50k">40-50k</span>
+                                      </span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="cb-contact-cgrid-col">
+                                  <label class="cb-checkbox cb-checkbox_cta">
+                                    <input type="radio" name="budget" value="50-100k" />
+                                    <span class="cb-checkbox_cta-box">
+                                      <span class="cb-checkbox_cta-border"></span>
+                                      <span class="cb-checkbox_cta-ripple">
+                                        <span></span>
+                                      </span>
+                                      <span class="cb-checkbox_cta-title">
+                                        <span data-text="50-100k">50-100k</span>
+                                      </span>
+                                    </span>
+                                  </label>
+                                </div>
+                                <div class="cb-contact-cgrid-col">
+                                  <label class="cb-checkbox cb-checkbox_cta">
+                                    <input type="radio" name="budget" value="more-than-100k" />
+                                    <span class="cb-checkbox_cta-box">
+                                      <span class="cb-checkbox_cta-border"></span>
+                                      <span class="cb-checkbox_cta-ripple">
+                                        <span></span>
+                                      </span>
+                                      <span class="cb-checkbox_cta-title">
+                                        <span data-text="More than 100k">More than 100k</span>
+                                      </span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="cb-contact-group -it">
+                              <div
+                                class="cb-input cb-input_file"
+                                data-validity='{"size":26214400,"limit":10}'
+                                data-validity-msg='{"size":"Size limit has been exceeded (25 mb)","limit":"Attach up to 10 files"}'
+                              >
+                                <!-- The actual file input is hidden -->
+                                <input type="file" id="fileInput" name="attachments" multiple style="display: none;" />
+                                <!-- The button is used to trigger the file input -->
+                                <button class="cb-input_file-btn" type="button" onclick="document.getElementById('fileInput').click()">
+                                  <svg class="cb-svgsprite -attachment">
+                                    <use xlink:href="../assets/sprites/svgspritesc81e.svg?2#attachment"></use>
+                                  </svg>
+                                  <span>Add attachment</span>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="cb-contact-group">
+                              <div class="cb-contact-submit">
+                                <button class="cb-btn cb-btn_round cb-btn_cta" type="submit">
+                                  Send Request
+                                </button>
+                              </div>
+                            </div>
+                          </form>
+                          
+                          </div>
+                        </div>
+                      </section>
+                      <div class="cb-modal cb-modal_box" id="modal-contact-success">
+                        <div
+                          class="cb-modal_box-backdrop"
+                          data-modal-close
+                          data-cursor-icon="times"
+                        ></div>
+                        <div class="cb-modal_box-dialog" data-modal-dialog>
+                          <div class="cb-modal_box-container -lg">
+                            <div class="cb-modal_box-message">
+                              <div class="cb-modal_box-message-header">
+                                Thank you!
+                                <img src="../assets/emoji/lg/1F44D.png" alt="👍" />
+                              </div>
+                              <div class="cb-modal_box-message-text">
+                                <p>
+                                  Thanks for inquiry! We'll contact you shortly!
+                                  <img src="../assets/emoji/1F609.png" alt="😉" />
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cb-modal cb-modal_box" id="modal-contact-error">
+                        <div
+                          class="cb-modal_box-backdrop"
+                          data-modal-close
+                          data-cursor-icon="times"
+                        ></div>
+                        <div class="cb-modal_box-dialog" data-modal-dialog>
+                          <div class="cb-modal_box-container -lg">
+                            <div class="cb-modal_box-message">
+                              <div class="cb-modal_box-message-header">
+                                Oops..
+                                <img
+                                  src="../assets/emoji/lg/1F631.png"
+                                  srcset="/assets/emoji/lg/1F631@2x.png 2x"
+                                  alt="😱"
+                                />
+                              </div>
+                              <div class="cb-modal_box-message-text">
+                                <p>
+                                  Something went wrong. Please check form data and try again or
+                                  send <a href="mailto:info@cuberto.com">email</a> to us.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                 </div>
             </div>
         </section>
@@ -438,6 +757,70 @@
         </div>
         <!-- end scroll progress -->
         <!-- javascript libraries -->
+        <script>
+            (function (m, e, t, r, i, k, a) {
+              m[i] =
+                m[i] ||
+                function () {
+                  (m[i].a = m[i].a || []).push(arguments);
+                };
+              m[i].l = 1 * new Date();
+              for (var j = 0; j < document.scripts.length; j++) {
+                if (document.scripts[j].src === r) {
+                  return;
+                }
+              }
+              (k = e.createElement(t)),
+                (a = e.getElementsByTagName(t)[0]),
+                (k.async = 1),
+                (k.src = r),
+                a.parentNode.insertBefore(k, a);
+            })(
+              window,
+              document,
+              "script",
+              "../../mc.webvisor.org/metrika/tag_ww.js",
+              "ym"
+            );
+            ym((window.ymID = 22519915), "init", {
+              clickmap: true,
+              trackLinks: true,
+              accurateTrackBounce: true,
+              webvisor: true,
+            });
+          </script>
+      
+          <!-- form -->
+           <script>
+      
+      document.querySelector('.cb-contact-form').addEventListener('submit', async function (event) {
+        event.preventDefault(); // Prevent the default form submission
+      
+        const form = event.target;
+        const formData = new FormData(form); // Create FormData object to handle file and other inputs
+      
+        try {
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+          });
+      
+          const result = await response.json();
+      
+          if (response.ok) {
+            // Success message alert
+            alert('Your request has been sent successfully!');
+            form.reset(); // Optionally reset the form fields after successful submission
+          } else {
+            // Error message alert
+            alert(result.error || 'An error occurred while sending your request. Please try again.');
+          }
+        } catch (error) {
+          console.error('Form submission error:', error);
+          alert('Failed to send the request. Please try again later.');
+        }
+      });
+      </script>
         <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/vendors.min.js"></script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCA56KqSJ11nQUw_tXgXyNMiPmQeM7EaSA&callback=initMap"></script>
