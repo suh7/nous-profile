@@ -4042,12 +4042,12 @@ p {
 }
 
 .cb-contact-content {
-  padding: 17.9rem 0 11.3rem 0;
+  padding: 17.9rem 0 0;
 }
 
 @media (min-width: 768px) {
   .cb-contact-content {
-    padding: 20.4rem 0 25rem 0;
+    padding: 0 0 0 0;
   }
 }
 
