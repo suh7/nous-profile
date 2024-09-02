@@ -150,8 +150,10 @@
     <!-- start header -->
     <header>
       <!-- start navigation -->
+      <!-- start navigation -->
       <nav
         class="navbar navbar-expand-lg header-light header-transparent bg-transparent disable-fixed"
+        style="position: fixed; backdrop-filter: blur(20px)"
       >
         <div class="container-fluid">
           <div class="col-auto col-lg-2 me-lg-0 me-auto">
@@ -160,7 +162,12 @@
                 src="images/lettermark.png"
                 alt=""
                 class="default-logo"
-                style="width: 150px; object-fit: cover"
+                style="
+                  width: 150px;
+                  object-fit: cover;
+                  position: absolute;
+                  left: 0;
+                "
               />
               <img
                 src="images/lettermark.png"
