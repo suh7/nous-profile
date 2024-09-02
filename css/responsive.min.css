@@ -20009,6 +20009,7 @@
   .navbar-modern-inner.bg-transparent,
   .navbar.bg-transparent {
     background-color: var(--white) !important;
+    position: fixed !important;
   }
   .navbar .navbar-collapse.show,
   .navbar-full-screen-menu-inner .navbar-collapse.show,
