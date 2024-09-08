@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body,
 html {
   font-size: 16px;
@@ -2763,7 +2768,7 @@ textarea:focus {
   box-shadow: none;
 }
 [data-anime] {
-  opacity: 0;
+  opacity: 1;
 }
 [data-anime].appear {
   opacity: 1;
@@ -19513,3 +19518,235 @@ footer .footer-navbar .nav-item:last-child a {
   max-height: 55px !important;
 }
 /*# sourceMappingURL=style.min.css.map */
+
+/* Pricing Section */
+.pricing-section {
+  padding: 64px 0;
+  /* background-color: #f8f9fa; */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section-header h6 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #c552ec;
+  letter-spacing: 1.5px;
+}
+
+.section-header h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #333;
+  margin-top: 8px;
+}
+
+.section-header p {
+  margin-top: 16px;
+  color: #666;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Pricing Boxes */
+.pricing-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.pricing-box {
+  background-color: #fff;
+  color: #333;
+  padding: 32px;
+  border-radius: 8px;
+  max-width: 320px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.pricing-box:hover {
+  transform: scale(1.05);
+}
+
+.plan-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.plan-icon {
+  color: #c552ec;
+  font-size: 24px;
+  margin-right: 12px;
+}
+
+.plan-header h6 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.plan-features {
+  color: #666;
+  margin-bottom: 24px;
+  list-style: none;
+  padding: 0;
+}
+
+.plan-features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.plan-features i {
+  color: #c552ec;
+  margin-right: 8px;
+}
+
+.plan-price {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 24px;
+}
+
+.plan-price h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.plan-price span {
+  margin-left: 8px;
+  color: #888;
+}
+
+.order-btn {
+  display: inline-block;
+  background-color: #c552ec;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.order-btn:hover {
+  background-color: #b542d9;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 64px 0;
+  /* background-color: #f0f0f0; */
+  text-align: center;
+}
+
+.cta-container h2 {
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 24px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: #c552ec;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #b542d9;
+}
+
+/* Scroll to Top */
+.scroll-top {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+}
+
+.scroll-top a {
+  display: inline-block;
+  background-color: #c552ec;
+  color: #fff;
+  padding: 12px;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.scroll-top a:hover {
+  background-color: #b542d9;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .pricing-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-box {
+    max-width: 90%;
+    margin-bottom: 32px;
+  }
+
+  .cta-section {
+    padding: 48px 16px;
+  }
+
+  .section-header h2 {
+    font-size: 28px;
+  }
+
+  .plan-price h1 {
+    font-size: 36px;
+  }
+}
+/* Pricing Toggle */
+.pricing-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.toggle-btn {
+  background: #ddd;
+  border: 1px solid #ccc;
+  border-radius: 9999px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  margin: 0 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.toggle-btn.active {
+  background: #c552ec;
+  color: #fff;
+}
+
+.toggle-btn:hover {
+  background: #bbb;
+}

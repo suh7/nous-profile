@@ -3578,3 +3578,36 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleButtons = document.querySelectorAll(".toggle-btn");
+  const pricingBoxes = document.querySelectorAll(".pricing-box");
+
+  toggleButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      // Remove active class from all buttons
+      toggleButtons.forEach((btn) => btn.classList.remove("active"));
+      // Add active class to the clicked button
+      button.classList.add("active");
+
+      const period = button.getAttribute("data-period");
+
+      pricingBoxes.forEach((box) => {
+        const priceElement = box.querySelector(".plan-price h1");
+        const spanElement = box.querySelector(".plan-price span");
+
+        if (period === "monthly") {
+          priceElement.textContent = `$${box.getAttribute(
+            "data-monthly-price"
+          )}`;
+          spanElement.textContent = "/monthly";
+        } else {
+          priceElement.textContent = `$${box.getAttribute(
+            "data-yearly-price"
+          )}`;
+          spanElement.textContent = "/yearly";
+        }
+      });
+    });
+  });
+});
