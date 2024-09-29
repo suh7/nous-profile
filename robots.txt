@@ -1,6 +1,11 @@
-# Global rule for all crawlers
 User-agent: *
-Allow: /
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /admin/
 
-# Provide sitemap location for better indexing
+# Allow specific crawler (if needed)
+User-agent: Googlebot
+Allow: /public/
+
+# Sitemap location
 Sitemap: https://www.nousinfotech.com/sitemap.xml

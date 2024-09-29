@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 Not Found</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to right, #f4f4f4, #e0e0e0);
+        font-family: "Arial", sans-serif;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+
+      .error-container {
+        text-align: center;
+        background: white;
+        padding: 40px 20px;
+        border-radius: 15px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s;
+        max-width: 600px;
+        width: 90%; /* Make the container responsive */
+      }
+
+      .error-container:hover {
+        transform: translateY(-5px);
+      }
+
+      .error-title {
+        font-size: 80px;
+        margin: 0;
+        color: #c552ec;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .error-subtitle {
+        font-size: 24px;
+        margin: 10px 0;
+        color: #555;
+      }
+
+      .error-message {
+        font-size: 18px;
+        margin: 15px 0;
+        line-height: 1.6;
+        color: #666;
+      }
+
+      .error-link {
+        text-decoration: none;
+        color: #c552ec;
+        font-weight: bold;
+        margin: 20px 0;
+        display: inline-block;
+        padding: 10px 20px;
+        border: 2px solid #c552ec;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+        background-color: transparent;
+      }
+
+      .error-link:hover {
+        background-color: #c552ec;
+        color: #fff;
+      }
+
+      .suggestions {
+        margin-top: 20px;
+        color: #555;
+      }
+
+      .link-list {
+        list-style-type: none;
+        padding: 0;
+        display: flex; /* Flexbox for row layout */
+        justify-content: center; /* Center align the links */
+        flex-wrap: wrap; /* Wrap links to next line on smaller screens */
+      }
+
+      .suggestion-link {
+        color: #c552ec;
+        text-decoration: none;
+        margin: 0 15px; /* Add margin for spacing */
+      }
+
+      .error-form {
+        margin-top: 20px;
+      }
+
+      .error-input {
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 300px;
+        font-size: 16px;
+      }
+
+      .error-button {
+        padding: 10px 15px;
+        border: none;
+        background-color: #c552ec;
+        color: white;
+        font-size: 16px;
+        margin-left: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      .error-button:hover {
+        background-color: #a143b4;
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 600px) {
+        .error-title {
+          font-size: 60px; /* Smaller title on mobile */
+        }
+        .error-subtitle {
+          font-size: 20px; /* Smaller subtitle on mobile */
+        }
+        .error-message,
+        .error-input {
+          font-size: 16px; /* Smaller text on mobile */
+        }
+        .error-link {
+          font-size: 16px; /* Smaller link text on mobile */
+        }
+      }
+
+      @media (max-width: 400px) {
+        .link-list {
+          flex-direction: column; /* Stack links vertically on very small screens */
+        }
+        .suggestion-link {
+          margin: 5px 0; /* Adjust spacing for stacked links */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="error-container">
+      <h1 class="error-title">404</h1>
+      <h2 class="error-subtitle">Page Not Found</h2>
+      <p class="error-message">
+        Sorry, the page you are looking for does not exist. It might have been
+        removed or is temporarily unavailable.
+      </p>
+      <img
+        src="images/404.webp"
+        alt="404 Illustration"
+        style="
+          max-width: 20%;
+          height: auto;
+          margin-top: 20px;
+          margin-right: 10px;
+          object-fit: cover;
+          object-position: center;
+          margin-bottom: -2rem;
+        "
+      />
+      <!-- Update with your image path -->
+      <a href="index.html" class="error-link">Return to Homepage</a>
+      <div class="suggestions">
+        <h3>Here are some helpful links:</h3>
+        <ul class="link-list">
+          <li><a href="about.html" class="suggestion-link">Agency</a></li>
+          <li>
+            <a href="expertise.html" class="suggestion-link">Expertise</a>
+          </li>
+          <li><a href="projects.html" class="suggestion-link">Projects</a></li>
+          <li><a href="people.html" class="suggestion-link">People</a></li>
+          <li><a href="contact.html" class="suggestion-link">Contact</a></li>
+        </ul>
+      </div>
+      <form class="error-form" action="/search" method="get">
+        <input
+          type="text"
+          class="error-input"
+          name="query"
+          placeholder="Search..."
+        />
+        <button type="submit" class="error-button">Search</button>
+      </form>
+    </div>
+  </body>
+</html>
