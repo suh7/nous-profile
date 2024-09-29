@@ -3578,36 +3578,116 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+$(document).ready(function () {
+  const pricingInfoMonthly = {
+    boxes: [
+      {
+        price: "$59",
+        description: "/monthly",
+        features: [
+          "Market Research",
+          "Content Marketing",
+          "Marketing Strategy",
+          "Public Relations",
+          "Video Production",
+        ],
+      },
+      {
+        price: "$79",
+        description: "/monthly",
+        features: [
+          "Market Research",
+          "Content Marketing",
+          "Marketing Strategy",
+          "Public Relations",
+          "Video Production",
+        ],
+      },
+      {
+        price: "$99",
+        description: "/monthly",
+        features: [
+          "Market Research",
+          "Content Marketing",
+          "Marketing Strategy",
+          "Public Relations",
+          "Video Production",
+        ],
+      },
+    ],
+  };
 
-document.addEventListener("DOMContentLoaded", () => {
-  const toggleButtons = document.querySelectorAll(".toggle-btn");
-  const pricingBoxes = document.querySelectorAll(".pricing-box");
+  const pricingInfoYearly = {
+    boxes: [
+      {
+        price: "$599",
+        description: "/yearly",
+        features: [
+          "Market Research",
+          "Content Marketing",
+          "Marketing Strategy",
+          "Public Relations",
+          "Video Production",
+        ],
+      },
+      {
+        price: "$799",
+        description: "/yearly",
+        features: [
+          "Market Research",
+          "Content Marketing",
+          "Marketing Strategy",
+          "Public Relations",
+          "Video Production",
+        ],
+      },
+      {
+        price: "$999",
+        description: "/yearly",
+        features: [
+          "Market Research",
+          "Content Marketing",
+          "Marketing Strategy",
+          "Public Relations",
+          "Video Production",
+        ],
+      },
+    ],
+  };
 
-  toggleButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      // Remove active class from all buttons
-      toggleButtons.forEach((btn) => btn.classList.remove("active"));
-      // Add active class to the clicked button
-      button.classList.add("active");
+  function updatePricing(period) {
+    let pricingInfo;
+    if (period === "monthly") {
+      pricingInfo = pricingInfoMonthly;
+      $(".toggle-btn[data-period='monthly']").addClass("active");
+      $(".toggle-btn[data-period='yearly']").removeClass("active");
+    } else {
+      pricingInfo = pricingInfoYearly;
+      $(".toggle-btn[data-period='monthly']").removeClass("active");
+      $(".toggle-btn[data-period='yearly']").addClass("active");
+    }
 
-      const period = button.getAttribute("data-period");
-
-      pricingBoxes.forEach((box) => {
-        const priceElement = box.querySelector(".plan-price h1");
-        const spanElement = box.querySelector(".plan-price span");
-
-        if (period === "monthly") {
-          priceElement.textContent = `$${box.getAttribute(
-            "data-monthly-price"
-          )}`;
-          spanElement.textContent = "/monthly";
-        } else {
-          priceElement.textContent = `$${box.getAttribute(
-            "data-yearly-price"
-          )}`;
-          spanElement.textContent = "/yearly";
-        }
-      });
+    $(".pricing-boxes .pricing-box").each(function (index) {
+      const boxInfo = pricingInfo.boxes[index];
+      if (boxInfo) {
+        $(this).find(".plan-price h1").text(boxInfo.price);
+        $(this).find(".plan-price span").text(boxInfo.description);
+        $(this).find(".plan-features").empty();
+        boxInfo.features.forEach((feature) => {
+          $(this)
+            .find(".plan-features")
+            .append(`<li><i class="bi bi-check-circle"></i> ${feature}</li>`);
+        });
+      }
     });
+  }
+
+  // Initial load with yearly pricing
+  updatePricing("yearly");
+
+  // Toggle button click event
+  $(".pricing-toggle .toggle-btn").click(function () {
+    const period = $(this).data("period");
+    updatePricing(period);
   });
 });

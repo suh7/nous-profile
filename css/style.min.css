@@ -19728,6 +19728,7 @@ footer .footer-navbar .nav-item:last-child a {
   display: flex;
   justify-content: center;
   margin-bottom: 24px;
+  pointer-events: auto;
 }
 
 .toggle-btn {
